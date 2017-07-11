@@ -1,7 +1,5 @@
 /**
  * Created by kshine on 2017/7/10.
- */
-/*
  var box;
  alert(box);
  alert(typeof box); //box是Undefined类型 值是undefined 类型返回的字符串undefined
@@ -33,26 +31,53 @@
  alert(box);
  alert(typeof box); //box是Function函数 值是function box(){}  类型返回的字符串function
 
-//判断对象是否已经创建
+ //判断对象是否已经创建
  var box = {};
  if(box != null){
  alert("对象已经创建成功！");
- }
+ };
 
  var box = {};
  alert(typeof(box));
  if(typeof(box) == "object"){
  alert("对象已经创建成功！");
- }
+ };
 
+ //chrome 不知道为什么 第一个alert会闪
+ var box;
+ box = {name:1};
+ alert(box);
+
+ var box1 = '';
+ var box2 = 0;
+ var box3 = false;
+
+ //数据类型判断
+ alert(undefined == null); //数据类型转换后比较 未初始化的变量和赋值为null的变量相等
+ alert(undefined === null); //数据类型不转换，所以需要比较数据类型
+ alert(typeof undefined == typeof null);
+
+ var box = 'wang';
+ alert(Boolean(box)); //boolean 类型转换 true
+
+ alert('hello world');
+ var box = 'wang';
+ if(box){
+    alert('真');
+}else{
+    alert('假');
+}
+ //非空字符串 true  非0和非NaN number true
+ //null undefined  返回false
  */
-var box = {};
-alert(typeof(box));
-if(typeof(box) === "object"){
-    alert("对象已经创建成功！");
-}
 
-if(box !== null){
-    alert("对象已经创建成功！");
-}
+alert('hello world');
 
+var box = 'wang';
+if(box){
+    alert('真');
+}else{
+    alert('假');
+}
+//非空字符串 true  非0和非NaN number true
+//null undefined  返回false
