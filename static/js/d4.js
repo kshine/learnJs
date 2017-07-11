@@ -33,7 +33,26 @@
  alert(box);
  alert(typeof box); //box是Function函数 值是function box(){}  类型返回的字符串function
 
+//判断对象是否已经创建
+ var box = {};
+ if(box != null){
+ alert("对象已经创建成功！");
+ }
+
+ var box = {};
+ alert(typeof(box));
+ if(typeof(box) == "object"){
+ alert("对象已经创建成功！");
+ }
+
  */
-function box(){};
-alert(box);
-alert(typeof box); //box是Function函数 值是function box(){}  类型返回的字符串function
+var box = {};
+alert(typeof(box));
+if(typeof(box) === "object"){
+    alert("对象已经创建成功！");
+}
+
+if(box !== null){
+    alert("对象已经创建成功！");
+}
+
